@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fieldofactivityannotations:FieldOfActivityAnnotationRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ComponentRepository="edu.kit.ipd.sdq.kaps.xppu.componentrepository" xmlns:InterfaceRepository="edu.kit.ipd.sdq.kaps.xppu.interfacerepository" xmlns:StructureRepository="edu.kit.ipd.sdq.kaps.xppu.structurerepository" xmlns:fieldofactivityannotations="http://sdq.ipd.kit.edu/KAPSFieldofactivityannotations/0.1">
+  <calibrationSpecification role="//@staffSpecification/@roleList/@roles.2">
+    <calibrationConfig name="CC">
+      <components xsi:type="ComponentRepository:Controller" href="plant.xppu#PLC"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Conveyor"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stack"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stamp"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stack"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stamp"/>
+      <components xsi:type="ComponentRepository:TurningTable" href="plant.xppu#ProductionCrane.TurningTable"/>
+      <components xsi:type="ComponentRepository:TurningTable" href="plant.xppu#ReplacementCrane.TurningTable"/>
+      <structures xsi:type="StructureRepository:ControlCabinet" href="plant.xppu#CC"/>
+      <structures xsi:type="StructureRepository:Crane" href="plant.xppu#ProductionCrane"/>
+      <structures xsi:type="StructureRepository:Crane" href="plant.xppu#ReplacementCrane"/>
+    </calibrationConfig>
+  </calibrationSpecification>
+  <testSpecification role="//@staffSpecification/@roleList/@roles.2">
+    <systemTests testName="ST">
+      <systemUnderTest href="plant.xppu#MainPlant"/>
+    </systemTests>
+  </testSpecification>
+  <stockSpecification role="//@staffSpecification/@roleList/@roles.1">
+    <componentStockList filename="Components in Stock">
+      <components xsi:type="ComponentRepository:Controller" href="plant.xppu#PLC"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Conveyor"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stack"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stamp"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stack"/>
+      <components xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stamp"/>
+      <components xsi:type="ComponentRepository:TurningTable" href="plant.xppu#ProductionCrane.TurningTable"/>
+      <components xsi:type="ComponentRepository:TurningTable" href="plant.xppu#ReplacementCrane.TurningTable"/>
+    </componentStockList>
+    <interfaceStockList filename="Interfaces in Stock">
+      <interfaces xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ProductionCrane.TurningTable.MS.Conveyor.PC"/>
+      <interfaces xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ProductionCrane.TurningTable.MS.Stack.PC"/>
+      <interfaces xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ProductionCrane.TurningTable.MS.Stamp.PC"/>
+      <interfaces xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor.PC"/>
+      <interfaces xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stack.PC"/>
+      <interfaces xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stamp.PC"/>
+    </interfaceStockList>
+    <moduleStockList filename="Modules in Stock"/>
+    <structureStockList filename="Structures in Stock">
+      <structures xsi:type="StructureRepository:ControlCabinet" href="plant.xppu#CC"/>
+      <structures xsi:type="StructureRepository:Crane" href="plant.xppu#ProductionCrane"/>
+      <structures xsi:type="StructureRepository:Crane" href="plant.xppu#ReplacementCrane"/>
+    </structureStockList>
+  </stockSpecification>
+  <hmiSpecification role="//@staffSpecification/@roleList/@roles.0">
+    <hmiConfig name="HMI Config">
+      <components xsi:type="ComponentRepository:Controller" href="plant.xppu#PLC"/>
+    </hmiConfig>
+  </hmiSpecification>
+  <ecadSpecification role="//@staffSpecification/@roleList/@roles.0">
+    <drawings xsi:type="fieldofactivityannotations:StructureDrawing" filename="cc.draw">
+      <drawn_structure xsi:type="StructureRepository:ControlCabinet" href="plant.xppu#CC"/>
+    </drawings>
+    <drawings xsi:type="fieldofactivityannotations:StructureDrawing" filename="pcrane.draw">
+      <drawn_structure xsi:type="StructureRepository:Crane" href="plant.xppu#ProductionCrane"/>
+    </drawings>
+    <drawings xsi:type="fieldofactivityannotations:StructureDrawing" filename="rcrane.draw">
+      <drawn_structure xsi:type="StructureRepository:Crane" href="plant.xppu#ReplacementCrane"/>
+    </drawings>
+    <drawings xsi:type="fieldofactivityannotations:ComponentDrawing" filename="msconv.draw">
+      <drawn_component xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Conveyor"/>
+    </drawings>
+    <drawings xsi:type="fieldofactivityannotations:ComponentDrawing" filename="msstack.draw">
+      <drawn_component xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stack"/>
+    </drawings>
+    <drawings xsi:type="fieldofactivityannotations:ComponentDrawing" filename="msstamp.draw">
+      <drawn_component xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stamp"/>
+    </drawings>
+  </ecadSpecification>
+  <documentationSpecification role="//@staffSpecification/@roleList/@roles.0">
+    <componentDocumentation>
+      <mainteneance filename="contoller.doc"/>
+      <documentedComponent xsi:type="ComponentRepository:Controller" href="plant.xppu#PLC"/>
+    </componentDocumentation>
+    <componentDocumentation>
+      <mainteneance filename="msconv.doc"/>
+      <documentedComponent xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Conveyor"/>
+    </componentDocumentation>
+    <componentDocumentation>
+      <mainteneance filename="msstack.doc"/>
+      <documentedComponent xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stack"/>
+    </componentDocumentation>
+    <componentDocumentation>
+      <mainteneance filename="msstamp.draw"/>
+      <documentedComponent xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ProductionCrane.TurningTable.MS.Stamp"/>
+    </componentDocumentation>
+    <structureDocumentation>
+      <mainteneance filename="prane_main.doc"/>
+      <instructions filename="pcrane_op.doc"/>
+      <trainingIntern filename="pcran_train.doc"/>
+      <documentedStructure xsi:type="StructureRepository:Crane" href="plant.xppu#ProductionCrane"/>
+    </structureDocumentation>
+  </documentationSpecification>
+  <staffSpecification>
+    <personList>
+      <persons roles="//@staffSpecification/@roleList/@roles.2" name="Clark Kent"/>
+      <persons roles="//@staffSpecification/@roleList/@roles.0" name="Bruce Wayne"/>
+      <persons roles="//@staffSpecification/@roleList/@roles.1" name="Barry Allen"/>
+    </personList>
+    <roleList>
+      <roles xsi:type="fieldofactivityannotations:Engineer" person="//@staffSpecification/@personList/@persons.1" description="PlantEngineer"/>
+      <roles xsi:type="fieldofactivityannotations:Purchaser" person="//@staffSpecification/@personList/@persons.2" description="PlantPurchaser"/>
+      <roles xsi:type="fieldofactivityannotations:Mechanic" person="//@staffSpecification/@personList/@persons.0" description="PlantMechanic"/>
+    </roleList>
+  </staffSpecification>
+</fieldofactivityannotations:FieldOfActivityAnnotationRepository>

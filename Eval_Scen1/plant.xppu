@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xPPU:Plant xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ComponentRepository="edu.kit.ipd.sdq.kaps.xppu.componentrepository" xmlns:StructureRepository="edu.kit.ipd.sdq.kaps.xppu.structurerepository" xmlns:xPPU="edu.kit.ipd.sdq.kaps.xppu" id="MainPlant" PlantName="MainPlant">
+  <structures xsi:type="StructureRepository:Crane" id="ProductionCrane">
+    <components xsi:type="ComponentRepository:TurningTable" id="ProductionCrane.TurningTable">
+      <microswitchModule id="ProductionCrane.TurningTable.MS.Stack">
+        <pin id="ProductionCrane.TurningTable.MS.Stack.SI"/>
+        <physicalconnection id="ProductionCrane.TurningTable.MS.Stack.PC"/>
+      </microswitchModule>
+      <microswitchModule id="ProductionCrane.TurningTable.MS.Stamp">
+        <pin id="ProductionCrane.TurningTable.MS.Stamp.SI"/>
+        <physicalconnection id="ProductionCrane.TurningTable.MS.Stamp.PC"/>
+      </microswitchModule>
+      <microswitchModule id="ProductionCrane.TurningTable.MS.Conveyor">
+        <pin id="ProductionCrane.TurningTable.MS.Conveyor.SI"/>
+        <physicalconnection id="ProductionCrane.TurningTable.MS.Conveyor.PC"/>
+      </microswitchModule>
+    </components>
+  </structures>
+  <structures xsi:type="StructureRepository:Crane" id="ReplacementCrane">
+    <components xsi:type="ComponentRepository:TurningTable" id="ReplacementCrane.TurningTable">
+      <microswitchModule id="ReplacementCrane.TurningTable.MS.Stack" connectedInterfaces="ReplacementCrane.TurningTable.MS.Stack.PC ReplacementCrane.TurningTable.MS.Stack.SI">
+        <pin id="ReplacementCrane.TurningTable.MS.Stack.SI"/>
+        <physicalconnection id="ReplacementCrane.TurningTable.MS.Stack.PC"/>
+      </microswitchModule>
+      <microswitchModule id="ReplacementCrane.TurningTable.MS.Stamp" connectedInterfaces="ReplacementCrane.TurningTable.MS.Stamp.PC ReplacementCrane.TurningTable.MS.Stamp.SI">
+        <pin id="ReplacementCrane.TurningTable.MS.Stamp.SI"/>
+        <physicalconnection id="ReplacementCrane.TurningTable.MS.Stamp.PC"/>
+      </microswitchModule>
+      <microswitchModule id="ReplacementCrane.TurningTable.MS.Conveyor" connectedInterfaces="ReplacementCrane.TurningTable.MS.Conveyor.PC ReplacementCrane.TurningTable.MS.Conveyor.SI">
+        <pin id="ReplacementCrane.TurningTable.MS.Conveyor.SI"/>
+        <physicalconnection id="ReplacementCrane.TurningTable.MS.Conveyor.PC"/>
+      </microswitchModule>
+    </components>
+  </structures>
+  <structures xsi:type="StructureRepository:ControlCabinet" id="CC" controller="PLC">
+    <components xsi:type="ComponentRepository:Controller" id="PLC" connectedInterfaces="ProductionCrane.TurningTable.MS.Conveyor.SI ProductionCrane.TurningTable.MS.Stack.SI ProductionCrane.TurningTable.MS.Stamp.SI ReplacementCrane.TurningTable.MS.Conveyor.SI ReplacementCrane.TurningTable.MS.Stack.SI ReplacementCrane.TurningTable.MS.Stamp.SI" controllerOf="CC"/>
+  </structures>
+  <interfaceRepository id="_ho_mJwf8EeeMfKFcZhiXCQ"/>
+  <componentRepository id="_iDfJyAf8EeeMfKFcZhiXCQ"/>
+</xPPU:Plant>

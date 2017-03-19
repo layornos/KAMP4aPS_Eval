@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeploymentContext:DeploymentContextRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ComponentRepository="edu.kit.ipd.sdq.kaps.xppu.componentrepository" xmlns:DeploymentContext="http://sdq.ipd.kit.edu/KAPS_DeploymentContext/0.1" xmlns:InterfaceRepository="edu.kit.ipd.sdq.kaps.xppu.interfacerepository">
+  <componentCorrelation name="MicroSwitches">
+    <component xsi:type="ComponentRepository:Controller" href="plant.xppu#PLC"/>
+    <program href="plant.programs#/"/>
+    <variableMapping name="ProductionConveyor">
+      <programVariable href="plant.programs#//@ContainsProgramVarDecl.2"/>
+      <interfaceDeclaration xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ProductionCrane.TurningTable.MS.Conveyor.SI"/>
+    </variableMapping>
+    <variableMapping name="ProductionStack">
+      <programVariable href="plant.programs#//@ContainsProgramVarDecl.0"/>
+      <interfaceDeclaration xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ProductionCrane.TurningTable.MS.Stack.SI"/>
+    </variableMapping>
+    <variableMapping name="ProductionStamp">
+      <programVariable href="plant.programs#//@ContainsProgramVarDecl.1"/>
+      <interfaceDeclaration xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ProductionCrane.TurningTable.MS.Stamp.SI"/>
+    </variableMapping>
+    <variableMapping name="ReplacementConveyor">
+      <programVariable href="plant.programs#//@ContainsProgramVarDecl.5"/>
+      <interfaceDeclaration xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor.SI"/>
+    </variableMapping>
+    <variableMapping name="ReplacementStack">
+      <programVariable href="plant.programs#//@ContainsProgramVarDecl.0"/>
+      <interfaceDeclaration xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stack.SI"/>
+    </variableMapping>
+    <variableMapping name="ReplacementStamp">
+      <programVariable href="plant.programs#//@ContainsProgramVarDecl.4"/>
+      <interfaceDeclaration xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ReplacementCrane.TurningTable.MS.Stamp.SI"/>
+    </variableMapping>
+  </componentCorrelation>
+</DeploymentContext:DeploymentContextRepository>
