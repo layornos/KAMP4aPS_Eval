@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="ASCII"?>
-<modificationmarks:KAPSModificationRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modificationmarks="http://sdq.ipd.kit.edu/KAPSModificationmarks/1.0">
-  <seedModifications xsi:type="modificationmarks:KAPSSeedModifications"/>
-  <changePropagationSteps xsi:type="modificationmarks:ChangePropagationDueToHardwareChange"/>
+<modificationmarks:KAPSModificationRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ComponentRepository="edu.kit.ipd.sdq.kaps.xppu.componentrepository" xmlns:InterfaceRepository="edu.kit.ipd.sdq.kaps.xppu.interfacerepository" xmlns:modificationmarks="http://sdq.ipd.kit.edu/KAPSModificationmarks/1.0">
+  <seedModifications xsi:type="modificationmarks:KAPSSeedModifications">
+    <microswitchModuleModifications>
+      <affectedElement xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor"/>
+    </microswitchModuleModifications>
+  </seedModifications>
+  <changePropagationSteps xsi:type="modificationmarks:ChangePropagationDueToHardwareChange">
+    <physicalConnectionModifications causingElements="//@changePropagationSteps.0/@microSwitchModuleModifications.0" toolderived="true">
+      <affectedElement xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor.PC"/>
+    </physicalConnectionModifications>
+    <microSwitchModuleModifications toolderived="true" isReplaced="true">
+      <affectedElement xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor"/>
+      <causingElements xsi:type="ComponentRepository:MicroswitchModule" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor"/>
+    </microSwitchModuleModifications>
+    <interfaceModifications causingElements="//@changePropagationSteps.0/@microSwitchModuleModifications.0" toolderived="true">
+      <affectedElement xsi:type="InterfaceRepository:PhysicalConnection" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor.PC"/>
+    </interfaceModifications>
+    <interfaceModifications causingElements="//@changePropagationSteps.0/@microSwitchModuleModifications.0" toolderived="true">
+      <affectedElement xsi:type="InterfaceRepository:SignalInterface" href="plant.xppu#ReplacementCrane.TurningTable.MS.Conveyor.SI"/>
+    </interfaceModifications>
+  </changePropagationSteps>
 </modificationmarks:KAPSModificationRepository>
